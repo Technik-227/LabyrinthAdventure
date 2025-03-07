@@ -16,4 +16,4 @@ public class Config {
     public final static boolean INFO_MESSAGES = true;
     public final static boolean DEBUG = false;
 
-}//
+}

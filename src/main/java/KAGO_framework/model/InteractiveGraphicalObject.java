@@ -41,4 +41,4 @@ public abstract class InteractiveGraphicalObject extends GraphicalObject impleme
 
     }
 
-}//
+}

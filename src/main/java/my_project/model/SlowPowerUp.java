@@ -36,4 +36,4 @@ public class SlowPowerUp extends PowerUp {
         player.setSpeed(saveSpeed);
     }
 
-}//
+}

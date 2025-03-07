@@ -529,4 +529,4 @@ public class Labyrinth extends GraphicalObject{
         return hintergrundZellen;
     }
 
-}//
+}

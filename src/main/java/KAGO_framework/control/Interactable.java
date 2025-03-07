@@ -47,4 +47,4 @@ public interface Interactable {
      */
     void mousePressed(MouseEvent e);
 
-}//
+}

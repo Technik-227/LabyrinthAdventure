@@ -259,4 +259,4 @@ public class BinarySearchTree<ContentType extends ComparableContent<ContentType>
 		return node.right.node;
 	}
 
-}//
+}

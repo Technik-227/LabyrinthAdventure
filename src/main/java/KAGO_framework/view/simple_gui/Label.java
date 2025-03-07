@@ -110,4 +110,4 @@ public class Label extends GraphicalObject {
         this.g = g;
         this.b = b;
     }
-}//
+}

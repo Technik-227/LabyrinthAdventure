@@ -59,4 +59,4 @@ public interface ComparableContent<ContentType> {
    */     
   public boolean isLess(ContentType pContent);
 
-}//
+}

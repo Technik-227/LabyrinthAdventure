@@ -75,4 +75,4 @@ public class QueryResult{
       return 0;
   }
 
-}//
+}

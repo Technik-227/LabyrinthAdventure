@@ -238,4 +238,4 @@ public class GraphicalObject implements Drawable {
         this.radius = radius;
     }
 
-}//
+}
