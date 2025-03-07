@@ -1,11 +1,9 @@
 package my_project.control;
 
 import KAGO_framework.control.ViewController;
-import KAGO_framework.model.abitur.datenstrukturen.Queue;
-import my_project.model.Ball;
-import my_project.view.InputManager;
+import my_project.model.*;
 
-import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 
 /**
  * Ein Objekt der Klasse ProgramController dient dazu das Programm zu steuern. Die updateProgram - Methode wird
@@ -14,10 +12,18 @@ import java.awt.event.MouseEvent;
 public class ProgramController {
 
     //Attribute
+    private Player player;
+    private Labyrinth dasLabyrith;
 
+    private SpeedPowerUp speedP1,speedP2;
+    private SlowPowerUp slowP1, slowP2;
 
+    private Schluss schluss;
     // Referenzen
     private ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
+
+    private CollisionController collisionController;
+
 
     /**
      * Konstruktor
@@ -35,9 +41,31 @@ public class ProgramController {
      * Sie erstellt die leeren Datenstrukturen, zu Beginn nur eine Queue
      */
     public void startProgram() {
-        // Erstelle ein Objekt der Klasse Ball und lasse es zeichnen
-        Ball ball1 = new Ball(150,150);
-        viewController.draw(ball1);
+
+        dasLabyrith = new Labyrinth();
+        viewController.draw(dasLabyrith);
+
+        player = new Player(20 + ((int)(Math.random() * 23) * 80), 20 + ((int)(Math.random() * 12) * 80), viewController);
+        viewController.draw(player);
+
+        schluss = new Schluss(300, player);
+        viewController.draw(schluss);
+
+        speedP1 = new SpeedPowerUp(20 + ((int)(Math.random() * 23) * 80), 20 + ((int)(Math.random() * 12) * 80), 10, player);
+        viewController.draw(speedP1);
+
+        slowP1 = new SlowPowerUp(20 + ((int)(Math.random() * 23) * 80), 20 + ((int)(Math.random() * 12) * 80), 10, player);
+        viewController.draw(slowP1);
+
+        speedP2 = new SpeedPowerUp(20 + ((int)(Math.random() * 23) * 80), 20 + ((int)(Math.random() * 12) * 80), 15, player);
+        viewController.draw(speedP2);
+
+        slowP2 = new SlowPowerUp(20 + ((int)(Math.random() * 23) * 80), 20 + ((int)(Math.random() * 12) * 80), 15, player);
+        viewController.draw(slowP2);
+
+
+        collisionController = new CollisionController(player,dasLabyrith);
+
 
     }
 
@@ -46,6 +74,6 @@ public class ProgramController {
      * @param dt Zeit seit letzter Frame
      */
     public void updateProgram(double dt){
-
+        collisionController.update();
     }
 }
