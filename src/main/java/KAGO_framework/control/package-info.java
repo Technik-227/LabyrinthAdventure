@@ -6,4 +6,4 @@
  *
  * Dieses Package ist Bestandteil des Frameworks und sollte nur mit ausreichendem Wissen geändert werden.
  */
-package KAGO_framework.control;
+package KAGO_framework.control;//

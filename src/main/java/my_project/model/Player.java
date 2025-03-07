@@ -229,4 +229,4 @@ public class Player extends GraphicalObject {
     public void setLeftBound(double leftBound) {
         this.leftBound = leftBound;
     }
-}
+}//

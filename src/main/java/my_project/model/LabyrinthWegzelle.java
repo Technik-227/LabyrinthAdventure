@@ -96,5 +96,5 @@ public class LabyrinthWegzelle extends GraphicalObject {
     public double getY() {
         return y;
     }
-}
+}//
 

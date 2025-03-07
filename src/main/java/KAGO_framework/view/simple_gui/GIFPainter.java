@@ -63,3 +63,4 @@ public class GIFPainter extends GraphicalObject {
 
     }
 }
+//
